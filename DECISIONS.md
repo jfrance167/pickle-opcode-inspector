@@ -1,0 +1,10 @@
+# Decisions
+
+- October 5: coordinator-approved plan stages 1–4; reference ../.private/coordination/2026-10-05/SUCCESSORS.md. Chose a bounded standard-library educational wrapper over forking MIT Picklescan or LGPL Fickling; broader archive/model/symbolic features are outside this scope. Original research remains at ../.private/tooling-setup/review/pickle-inspector-plan-20261005/PLAN.md.
+- Admit only reviewed CPython 3.13.7/module and imported long-decoder source. Compatibility is intentionally narrow to avoid silently accepting changed reader allocations. Stage 1 proved every selected reader before stage 2.
+- Findings explain object-loading mechanisms without name resolution or a blacklist safety verdict. Decoded is STOP plus complete byte consumption, weaker than VM validity.
+- Fixed caps rather than unbounded controls. Per-read/line operand caps plus stricter numeric text; large binary integers use bit lengths, avoiding decimal conversion.
+- Runtime uses only the standard library. Existing installed Bandit 1.9.4 was used, not downloaded. Pin dev dependency and workflow Actions; disclose missing transitive hash lock and hosted eligibility/checks.
+- Two B403 pickletools import findings were reviewed false positives for this non-restoring path; narrow line exclusions with explanation retain all other rules and original evidence. No broad skip configuration.
+- Verification helper has three narrowly explained B404/B603 exclusions for fixed check/demonstration commands with shell disabled and timeouts; user input never selects commands. Replaced policy asserts with explicit failures (also checked under -O) and switched YAML to safe_load. Initial seven helper findings and failure evidence retained.
+- Local-first: Ollama README introduction completed in 1.676 seconds. Useful factual phrasing retained; its claim that all tests cover all paths was corrected to suite coverage, and simulated-hostile framing removed. Raw brief/draft retained in ignored .drafts. No remote inference, worker config changes or additional spending. Laya schemas did not fit.

@@ -1,0 +1,65 @@
+[
+  {
+    "check": "tests",
+    "status": "PASS",
+    "exit_code": 0,
+    "command": [
+      "<PYTHON>",
+      "-m",
+      "unittest",
+      "discover",
+      "-v"
+    ]
+  },
+  {
+    "check": "bandit",
+    "status": "PASS",
+    "exit_code": 0,
+    "command": [
+      "<PYTHON>",
+      "-m",
+      "bandit",
+      "-r",
+      "opcode_inspector",
+      "scripts",
+      "-f",
+      "json",
+      "-o",
+      "<PROJECT_ROOT>\\docs\\verification-reviewed-20261005\\bandit.json"
+    ]
+  },
+  {
+    "check": "whitespace",
+    "status": "PASS",
+    "exit_code": 0,
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ]
+  },
+  {
+    "check": "syntax",
+    "status": "PASS",
+    "source_count": 7
+  },
+  {
+    "check": "workflow policy",
+    "status": "PASS",
+    "note": "Local parse/pins/checkout policy, not hosted execution"
+  },
+  {
+    "check": "demo CLI",
+    "status": "PASS"
+  },
+  {
+    "check": "types/lint",
+    "status": "NOT RUN",
+    "reason": "No configured checker or installed project tool established"
+  },
+  {
+    "check": "Linux/hosted CI/CodeQL",
+    "status": "NOT RUN",
+    "reason": "No hosted repository or Linux runtime run"
+  }
+]
