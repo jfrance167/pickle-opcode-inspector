@@ -1,1 +1,24 @@
 *.pkl binary
+
+# Preserve reviewed snapshot bytes across checkout platforms.
+/.github/workflows/codeql.yml -text
+/.gitignore -text
+/DECISIONS.md -text
+/LEARNING.md -text
+/LICENSE -text
+/README.md -text
+/REVIEW.md -text
+/SECURITY.md -text
+/STATE.md -text
+/VERIFICATION.md -text
+/docs/READER-CONTRACT.md -text
+/opcode_inspector/__init__.py -text
+/opcode_inspector/__main__.py -text
+/opcode_inspector/core.py -text
+/opcode_inspector/guard.py -text
+/opcode_inspector/report.py -text
+/requirements-dev.txt -text
+/scripts/make_demo.py -text
+/scripts/verify_local.py -text
+/tests/test_guard.py -text
+/tests/test_inspector.py -text
